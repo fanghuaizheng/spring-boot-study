@@ -1,0 +1,12 @@
+server:
+  port: 1111
+
+jasypt:
+  encryptor:
+    password: fhz123
+    property:
+      prefix: FHZZ( #使用自定义密码前缀
+      suffix: )     #自定义密码后缀
+
+test:
+  one: FHZZ(vVGqmQTNzSb2Vj4tJrgpCVuLo6/DyA5PrU36G5P7XAML8Dnv57z6HCDNvNIK4X7u)
