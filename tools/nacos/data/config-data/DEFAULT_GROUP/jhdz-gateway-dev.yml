@@ -1,0 +1,36 @@
+
+# Spring
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: jhdz-auth
+          uri: lb://jhdz-auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - ValidateCodeFilter
+            - StripPrefix=1
+        - id: jhdz-gen
+          uri: lb://jhdz-gen
+          predicates:
+            - Path=/code/gen/**
+          filters:
+            - StripPrefix=1
+        - id: jhdz-job
+          uri: lb://jhdz-job
+          predicates:
+            - Path=/schedule/**
+          filters:
+            - StripPrefix=1
+        - id: jhdz-system
+          uri: lb://jhdz-system
+          predicates:
+            - Path=/system/**
+          filters:
+            - StripPrefix=1
+
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true

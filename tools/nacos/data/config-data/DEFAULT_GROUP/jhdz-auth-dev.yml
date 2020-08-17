@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.148.224.4:3306/budget?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root@123
+    driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,43 @@
+# Tomcat
+server:
+  port: 9201
+
+loginUrl: http://10.148.224.3
+#//各个角色id
+activiti: 
+ fiscal_ctrl: 101 #财务控制
+ sub_fiscal_budget: 100 #部门预算专员
+ sub_dept_mange: 103 #部门负责人
+ fiscal_boss: 104 #财务控制总监
+
+
+# Spring
+spring: 
+  mail:
+    host: 10.148.113.35
+    username: jv_it@jac-vwg.com
+    password: Aa123456
+    title: 关于预算系统的待办通知
+    template: 尊敬的{user}：</br>&nbsp;&nbsp;您好。预算系统有一条待办需要处理，请及时<a href='{loginUrl}'>登陆系统</a>处理。</br>&nbsp;&nbsp;流程名称：{processName}</br>&nbsp;&nbsp;部门截止提交日期：{endTime}</br></br></br>Dear {enName}:</br>&nbsp;&nbsp;Hello! There is a to-do item in the budget system that needs to be processed. Please timely <a href='{loginUrl}'> login system </a> processing.</br>&nbsp;&nbsp;Process name:{processName}</br>&nbsp;&nbsp;Department deadline:{endTime}</br>
+
+  #数据库配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid: 
+     master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://10.148.224.4:3306/budget?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+      username: root
+      password: root@123
+     slave:
+      enabled: true
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@10.148.110.14:1521/ERPDB
+      username: BUDGET_USER
+      password: E_bigpp123
+
+mybatis:
+  type-aliases-package: com.jhdz.**.domain
+  mapper-locations: classpath:mapper/system/budget/*.xml
+    
+
