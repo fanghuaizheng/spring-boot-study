@@ -30,6 +30,7 @@
         <module>docker-demo</module>
     	<module>spring-boot-gateway</module>
     <module>fhz-server-a</module>
+    <module>fhz-server-b</module>
   </modules>
     
     <dependencyManagement>

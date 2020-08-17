@@ -1,22 +1,19 @@
-package com.example.fhz.a;
+package com.example.fhz.b;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-
 
 /**
  * Hello world!
  *
  */
-@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ServiceAApp 
+public class App 
 {
     public static void main( String[] args )
     {
-    	SpringApplication.run(ServiceAApp.class, args);
+        SpringApplication.run(App.class, args);
     }
 }

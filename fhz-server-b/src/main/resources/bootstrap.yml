@@ -1,6 +1,6 @@
 # Tomcat
 server:
-  port: 9201
+  port: 9202
 
 # Spring
 spring: 
@@ -12,7 +12,7 @@ spring:
       percentage: 1.0
   application:
     # 应用名称
-    name: fhz-server-a
+    name: fhz-server-b
   profiles:
     # 环境配置
     active: dev
