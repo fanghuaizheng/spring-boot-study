@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.fhz.a.feign.FeignOne;
+
+import lombok.extern.slf4j.Slf4j;
 @RestController
+@Slf4j
 public class TestController {
 	
 	@Autowired
@@ -22,6 +25,7 @@ public class TestController {
     
     @GetMapping("get")
     public Object aouGet() {
+    	log.info("你好");
     	return "get";
     }
     
