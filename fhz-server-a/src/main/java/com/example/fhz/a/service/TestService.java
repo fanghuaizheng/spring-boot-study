@@ -1,4 +1,4 @@
-package com.example.fhz.a;
+package com.example.fhz.a.service;
 
 import org.springframework.stereotype.Service;
 

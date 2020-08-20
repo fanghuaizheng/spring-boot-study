@@ -1,4 +1,4 @@
-package com.example.fhz.a;
+package com.example.fhz.a.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.fhz.a.feign.FeignOne;
+import com.example.fhz.a.service.TestService;
 
 import lombok.extern.slf4j.Slf4j;
 @RestController
