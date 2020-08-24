@@ -1,3 +1,24 @@
+###开启Hystrix断路器
+#feign:
+#  hystrix:
+#    enabled: true
+
+ribbon:
+#  MaxAutoRetries: 1 #最大重试次数，当Eureka中可以找到服务，但是服务连不上时将会重试
+#  MaxAutoRetriesNextServer: 1 #切换实例的重试次数
+#  OkToRetryOnAllOperations: true # 对所有的操作请求都进行重试，如果是get则可以，如果是post,put等操作没有实现幂等的情况下是很危险的
+  ConnectTimeout: 5 #请求连接的超时时间
+  ReadTimeout: 5 #请求处理的超时时间
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 4500
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 6000
+
 # Tomcat
 server:
   port: 9201
