@@ -21,7 +21,7 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 6000
 
 # Tomcat
 server:
-  port: 9201
+  port: 9208
 
 # Spring
 spring: 
