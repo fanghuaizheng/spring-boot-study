@@ -23,6 +23,8 @@ public class I18NController {
 	
 	@RequestMapping("getValue")
 	public Object getValue() {
+		
+		
 		Locale local = LocaleContextHolder.getLocale();
 		return messgeSource.getMessage("welcome", null,local);
 	}
