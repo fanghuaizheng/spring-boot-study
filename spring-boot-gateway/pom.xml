@@ -65,6 +65,12 @@
         </dependency>
         
         
+        <dependency>
+        	<groupId>com.example.fhz</groupId>
+        	<artifactId>java-spi</artifactId>
+        	<version>1.0.0</version>
+        </dependency>
+        
   </dependencies>
   
   
