@@ -31,6 +31,8 @@
     	<module>spring-boot-gateway</module>
     <module>fhz-server-a</module>
     <module>fhz-server-b</module>
+    <module>java-spi</module>
+    <module>fhz-datasource-screw</module>
   </modules>
     
     <dependencyManagement>
