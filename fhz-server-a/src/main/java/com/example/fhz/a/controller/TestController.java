@@ -3,6 +3,7 @@ package com.example.fhz.a.controller;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,7 +47,8 @@ public class TestController {
 		
 	}
 	
-	@Idempotent
+//	@Idempotent
+	@SentinelResource("helloName")
     @GetMapping(value = "/hello/{name}")
     public String apiHello(@PathVariable String name) {
         return service.sayHello(name);

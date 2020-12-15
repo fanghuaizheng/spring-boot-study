@@ -54,21 +54,20 @@ spring:
         # 共享配置
         shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
     sentinel:
+      # 限流后跳转制定页面
+#      servlet:
+#        block-page: www.baidu.com
       # 取消控制台懒加载
       eager: true
       transport:
         # 控制台地址
         dashboard: 127.0.0.1:8718
       # nacos配置持久化
-#      datasource:
-#        ds1:
-#          nacos:
-#            server-addr: 127.0.0.1:8848
-#            dataId: sentinel-jhdz-gateway
-#            groupId: DEFAULT_GROUP
-#            data-type: json
-#            rule-type: flow
-
-#csp.sentinel.dashboard.server: 127.0.0.1:8718           
-#csp.sentinel.api.port: 8181
-#csp.sentinel.heartbeat.client.ip: 127.0.0.1
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: sentinel-server-a
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
