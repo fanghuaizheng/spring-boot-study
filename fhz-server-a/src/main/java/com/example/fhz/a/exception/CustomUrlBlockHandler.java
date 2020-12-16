@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 自定义 sentinel 限流错误
+ */
 @Component
 public class CustomUrlBlockHandler implements BlockExceptionHandler {
     @Override
@@ -39,5 +42,6 @@ public class CustomUrlBlockHandler implements BlockExceptionHandler {
         res.put("mesg",msg);
         // spring mvc自带的json操作工具，叫jackson
         response.getWriter().write(res.toJSONString());
+
     }
 }
